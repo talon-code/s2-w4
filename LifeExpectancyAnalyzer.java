@@ -25,7 +25,20 @@ public class LifeExpectancyAnalyzer {
      * @param filename path to the CSV file
      * @throws IOFoundException if the file is not found
      */
+
+
+    //in order to deal with scanner, have to deal with exception
+    //if error, throughs exception back, which is caught in the main class
     public void readFromFile(String filename) throws IOException {
+        File f = new File(filename);
+        Scanner s = new Scanner(f);
+
+        //try {
+        //     File f = new File(filename);
+        // Scanner s = new Scanner(f);
+        // } catch(Exception e){
+        //     System.out.println("couldn't read file");
+        // }
 
     }
 
