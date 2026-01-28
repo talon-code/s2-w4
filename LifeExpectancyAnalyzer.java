@@ -40,6 +40,12 @@ public class LifeExpectancyAnalyzer {
         //     System.out.println("couldn't read file");
         // }
 
+        while(s.hasNextLine()){
+            String line = s.nextLine();
+            String[] items = line.split(",");
+            System.out.println(items[0]);
+        }
+
     }
 
     /**
