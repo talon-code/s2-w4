@@ -87,7 +87,7 @@ public class LifeExpectancyAnalyzer {
        Country highest = countries.get(0);
         
         for(Country c: countries){
-            if(c.getLifeExpectancy2020() > highest.getLifeExpectancy2020());
+            if(c.getLifeExpectancy2020() > highest.getLifeExpectancy2020())
                 highest = c;
         }
 
@@ -105,7 +105,7 @@ public class LifeExpectancyAnalyzer {
        Country lowest = countries.get(0);
         
         for(Country c: countries){
-            if(c.getLifeExpectancy2020() < lowest.getLifeExpectancy2020());
+            if(c.getLifeExpectancy2020() < lowest.getLifeExpectancy2020())
                 lowest = c;
         }
 

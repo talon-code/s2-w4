@@ -91,7 +91,8 @@ public class Country {
      */
 
     public String toString() {
-       return this.name + " (" + this.region + ") - 2020 Life Expectancy: " + this.lifeExpectancy2020;
+       return this.name + " (" + this.region + ") - Population: " + this.population + " - Income Group: " + incomeGroup + 
+       " - 2010 Life Expectancy: " + this.lifeExpectancy2010 + " - 2015 Life Expectancy: " + this.lifeExpectancy2015 + " - 2020 Life Expectancy: " + this.lifeExpectancy2020;
     }
 
 
