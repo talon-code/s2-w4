@@ -44,7 +44,16 @@ public class LifeExpectancyAnalyzer {
             String line = s.nextLine();
             String[] items = line.split(",");
             System.out.println(items[0]);
+            Country temp = new Country(items[0], 
+                                    items[1], 
+                                    Integer.parseInt(items[2]), 
+                                    items[3], 
+                                    Double.parseDouble(items[4]), 
+                                    Double.parseDouble(items[5]), 
+                                    Double.parseDouble(items[6]));
+            countries.add(temp);
         }
+        System.out.println(countries.size());
 
     }
 
