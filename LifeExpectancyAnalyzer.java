@@ -32,6 +32,7 @@ public class LifeExpectancyAnalyzer {
     public void readFromFile(String filename) throws IOException {
         File f = new File(filename);
         Scanner s = new Scanner(f);
+        s.nextLine();
 
         //try {
         //     File f = new File(filename);
@@ -43,7 +44,6 @@ public class LifeExpectancyAnalyzer {
         while(s.hasNextLine()){
             String line = s.nextLine();
             String[] items = line.split(",");
-            System.out.println(items[0]);
             Country temp = new Country(items[0], 
                                     items[1], 
                                     Integer.parseInt(items[2]), 
@@ -54,14 +54,16 @@ public class LifeExpectancyAnalyzer {
             countries.add(temp);
         }
         System.out.println(countries.size());
-
+        s.close();
     }
 
     /**
      * Display all countries in the list
      */
     public void displayAllCountries() {
-  
+        for(Country c: countries){
+            System.out.println(c.getName());
+        }
     }
 
     /**
@@ -69,7 +71,10 @@ public class LifeExpectancyAnalyzer {
      * @param region the region to filter by
      */
     public void displayByRegion(String region) {
- 
+        for(Country c: countries){
+            if(c.getRegion().equals(region))
+            System.out.println(c.getName());
+        }
     }
 
     /**
@@ -77,7 +82,15 @@ public class LifeExpectancyAnalyzer {
      * @return the Country with the highest life expectancy, or null if list is empty
      */
     public Country findHighestLifeExpectancy() {
-       
+        if(countries.size() > 0)
+            Country highest = countries.get(0);
+        else
+            return null;
+        
+        for(Country c: countries){
+            System.out.println(c.getName());
+        }
+
     }
 
     /**
